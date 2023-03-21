@@ -1,0 +1,201 @@
+public class Main {
+
+    public static void main (String [] args) {
+
+    }
+}
+
+------------------------------------------------------------------------------
+Formatação
+
+%f = ponto flutuante
+%d = inteiro
+%s = texto
+%n = quebra de linha
+
+ex: 
+String nome = "Maria";
+int idade = 31;
+double renda = 4000.0;
+System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda)
+System.out.println(nome + "tem" + idade + "anos e ganha R$ + renda)
+
+
+--------------------------------------------------------------------------------
+Casting
+
+int a, b;
+double resultado;
+a = 5;
+b = 2;
+resultado = (double) a / b - Transformação direta de um tipo para o outro
+* Se não tivesse o casting retornaria int (resultado = 2)
+* Boas práticas:
+double c = 2.0 - colocar o .0 nos valores
+float d = 3f - colocar o f nos valores
+
+--------------------------------------------------------------------------------
+Scanner
+
+import java.util.Scanner
+
+Scanner sc = new Scanner(System.in)
+
+X = sc.next(); // entrada de STRING
+y = sc.nextInt(); // entrada de INT
+z = sc.nextDouble(); // entrada de DOUBLE
+w = sc.next().charAt(0); // entrada de CHAR
+
+s1 = sc.nextLine(); // entrada de dados em linha (mais de uma palavra)
+
+Quando você usa um comando de leitura diferente do nextLine() e
+dá alguma quebra de linha, essa quebra de linha fica "pendente"
+na entrada padrão.
+
+Fazer sc.nextLine() entre a entrada de outra variável diferente de sc.nextLine()
+para consumir o "enter".
+
+x = sc.nextInt();
+sc.nextLine();
+s1 = sc.nextLine(); // ex: Bom dia
+
+--------------------------------------------------------------------------------
+Funções Matemáticas
+
+A = Math.sqrt(x); // raiz quadrada de x
+A = Math.pow(x, y); //  x elevado a y
+A = Math.abs(x); // valor absoluto de x - Transforma pra positivo.
+
+
+--------------------------------------------------------------------------------
+Operações 
+
+comparativas
+
+> maior
+< menor
+>= maior ou igual
+<= menor ou igual
+== igual
+!= diferente
+
+cumulativas
+a += b; a = a + b;
+a -= b; a = a - b;
+a *= b; a = a * b;
+a /= b; a = a / b;
+a %= b; a = a % b;
+
+lógicas
+
+&& E
+
+A B   A && B
+------------
+F F     F
+F V     F
+V F     F
+V V     V
+
+
+|| OU
+
+A B   A || B
+------------
+F F     F
+F V     V
+V F     V
+V V     V
+
+! NÃO
+
+A !     A
+-------------
+F       V
+V       F
+
+--------------------------------------------------------------------------------
+Estruturas condicionais
+
+Composta
+---------------
+
+if ( <condição> ) {
+    <comando 1>
+    <comando 2>
+}
+else {
+    <comando 3>
+<comando 4>
+}
+  
+
+Composta com mais de 2 condições
+---------------------------------
+
+if ( condição 1 ) {
+     comando 1
+     comando 2
+}
+else {
+     if ( condição 2 ) {
+          comando 3
+          comando 4
+     }
+     else {
+          comando 5
+          comando 6
+     }
+}
+         ----
+         | ou |
+         ----
+if ( condição 1 ) {
+     comando 1
+     comando 2
+}
+else if ( condição 2 ) {
+     comando 3
+     comando 4
+}
+else if ( condição 3 ) {
+     comando 5
+     comando 6
+}
+else {
+     comando 7
+     comando 8
+}
+
+
+ternária
+--------
+
+( condição ) ? valor_se_verdadeiro : valor_se_falso
+
+Exemplo:
+double preco = 34.5;
+double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
+
+
+--------------------------------------------------------------------------------
+
+switch ( expressão ) {
+case valor1:
+          comando1
+          comando2
+          break;
+case valor2:
+          comando3
+          comando4
+          break;
+default:
+          comando5
+          comando6
+          break;
+}
+
+--------------------------------------------------------------------------------
+
+
+
