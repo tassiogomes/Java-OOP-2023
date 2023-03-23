@@ -8,7 +8,7 @@ public class Main {
 ------------------------------------------------------------------------------
 Formatação
 
-%f = ponto flutuante
+%f = ponto flutuante (controlar casas decimais %.2f) - duas casas por exemplo)
 %d = inteiro
 %s = texto
 %n = quebra de linha
@@ -20,6 +20,11 @@ double renda = 4000.0;
 System.out.printf("%s tem %d anos e ganha R$ %.2f reais%n", nome, idade, renda)
 System.out.println(nome + "tem" + idade + "anos e ganha R$ + renda)
 
+
+obs: Dependendo da configuração do pc, os números vem com separador vírgula.
+Para passar de vírgula para ponto, deve importar a biblioteca "Locale" e configurar.
+import java.util.Locale;
+Locale.setDefault(Locale.US);
 
 --------------------------------------------------------------------------------
 Casting
@@ -179,6 +184,42 @@ double desconto = (preco < 20.0) ? preco * 0.1 : preco * 0.05;
 
 
 --------------------------------------------------------------------------------
+Estruturas repetitivas
+
+while
+----------
+
+while(condicao){
+	comando 1;
+	comando ...n;
+}
+
+Usar while quando NÃO SE SABE previamente a quantidade de repetições que será realizada
+
+
+for
+----------
+
+for (inicio; condição; incremento) {
+    	comando 1;
+	comando ...n;
+}
+
+Usar for quando SE SABE previamente a quantidade de repetições que será realizada.
+
+
+do-while
+----------
+
+do{
+	comando 1;
+	comando...n;
+}while(condição)
+
+Repete as condições pelo menos uma vez antes de verificar a condição
+
+
+---------------------------------------------------------------------------------------
 
 switch ( expressão ) {
 case valor1:
