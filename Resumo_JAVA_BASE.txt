@@ -221,6 +221,7 @@ Repete as condições pelo menos uma vez antes de verificar a condição
 
 ---------------------------------------------------------------------------------------
 
+
 switch ( expressão ) {
 case valor1:
           comando1

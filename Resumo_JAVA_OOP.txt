@@ -1,0 +1,47 @@
+				         OOP
+------------------------------------------------------------------------
+
+package entities; 		//cria um package, que será usada em outro programa
+
+public class Triangle {   	// public permite que a classe possa ser chamada em outro programa
+
+public double a; 			// atributos da classe, do tipo public também, porque receberão valores de outro programa
+public double b;
+public double c;
+
+	public double area() {	// inserindo uma FUNÇÃO OU MÉTODO dentro da minha classe
+	double p = (a + b + c) / 2.0; // perimetro
+
+	return Math.sqrt(p * (p - a) * (p - b) * (p - c)); // o retorno do valor dos dados de entrada e da formula p.
+
+}
+
+NO PROGRAMA EM SI, CHAMAR O A CLASSE E MÉTODOS
+---------------------------------------------------
+
+package entities; 		// chama o package criado acima
+
+
+public class Program {
+	public static void main(String[] args) {
+
+Triangle x, y;			// declara duas variáveis do tipo da classe criada, nesse caso "Triangle".
+
+
+x = new Triangle();		// para que essa classe exista, tem que intancia-la (tipo o new Scanner).
+y = new Triangle();		// nesse caso, dois triângulos, tem que se instanciar duas vezes.
+
+
+x.a = sc.nextDouble();		// entrada de dados pelo scanner não mencionado aqui na explicação
+x.b = sc.nextDouble();
+x.c = sc.nextDouble();
+
+y.a = sc.nextDouble();
+y.b = sc.nextDouble();
+y.c = sc.nextDouble();
+
+double areaX = x.area();	// chama o método dentro da classe Triangle e devolve o return da função
+double areaY = y.area();
+
+----------------------------------------------------------------------
+
