@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Locale;
 
-public class ex2 {
+public class Example_2 {
 
     public static class Product {
         public String name;
@@ -57,8 +57,8 @@ public class ex2 {
         System.out.println("Update data: " + product +"/n");
         // print the entered variables REMOVE (RemoveProduct)
         System.out.println("Enter the number of products to be removed from stock: ");
-        quantity = input.nextInt();                 // entrada de valor na variável quantity para ser inclusa no método RemoveProduct
-        product.removeProducts(quantity);                  // chama a instância product da classe Product e atribui a variável quantity à função RemoveProduct
+        quantity = input.nextInt();                     // entrada de valor na variável quantity para ser inclusa no método RemoveProduct
+        product.removeProducts(quantity);               // chama a instância product da classe Product e atribui a variável quantity à função RemoveProduct
         System.out.println("Update data: " + product +"/n");
 
 
