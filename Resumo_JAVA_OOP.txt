@@ -25,11 +25,14 @@ package entities; 		// chama o package criado acima
 public class Program {
 	public static void main(String[] args) {
 
-Triangle x, y;			// declara duas variáveis do tipo da classe criada, nesse caso "Triangle".
+Triangle x, y;      // declara duas variáveis do tipo Triangle
+x = new Triangle(); // instancia o objeto x da classe Triangle
+y = new Triangle(); // instancia o objeto y da classe Triangle
 
+Poderia ser assim:
+Triangle x = new Triangle(); // declara e instancia o objeto x da classe Triangle
+Triangle y = new Triangle(); // declara e instancia o objeto y da classe Triangle
 
-x = new Triangle();		// para que essa classe exista, tem que intancia-la (tipo o new Scanner).
-y = new Triangle();		// nesse caso, dois triângulos, tem que se instanciar duas vezes.
 
 
 x.a = sc.nextDouble();		// entrada de dados pelo scanner não mencionado aqui na explicação
