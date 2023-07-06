@@ -1,7 +1,7 @@
-import java.util.Scanner;
 import java.util.Locale;
+import java.util.Scanner;
 
-public class ex1 {
+public class Example_1 {
 
     public static class Triangle {
         public double a;

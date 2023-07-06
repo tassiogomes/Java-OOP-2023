@@ -1,6 +1,5 @@
     import java.util.Scanner;
 
-    import javax.sound.sampled.SourceDataLine;
 
     import java.util.Locale;
 
